@@ -20,22 +20,12 @@ for flat in flats_list:
 	subway = flat[3].replace("м.", "")
 	subway_dict.setdefault(subway, [])
 # TODO 1: добавьте код, который генерирует новую структуру данных с информацией о квартире - словарь вместо списка
-flat_info = []
-for flat in flats_list:
-	id = int(flat[0])
-	# rooms = int(flat[1])
-	price = int(flat[11])
-	flat_dict = {'id': id, "rooms": flat[1], "type": flat[2], "price": price}
-	print(flat_dict)
-	# flat_info.append(flat_dict)
-# print(flat_info)
-# subway_dict[subway].append(flat_info)
+	flat_info = {"id": int(flat[0]), "rooms": flat[1], "type": flat[2], "price": int(flat[11])}
+	#print(flat_info)
+	# subway_dict[subway].append(flat_info)
 
 # TODO 2: подсчитайте и выведите на печать количество новостроек, расположенных рядом с каждым из метро. Используйте вариант прохода по словарю, который вам больше нравится
-# for k,v in subway_dict:
-#     # используйте v для анализа значения
-#     # ваш код...
-# # либо
+
 subways_dict = {}
 for flat in flats_list:
 	subways = flat[3]
