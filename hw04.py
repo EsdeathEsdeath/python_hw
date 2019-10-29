@@ -6,7 +6,7 @@
 # читаем текст из файла. в переменной text будет строка
 from functools import reduce
 
-with open("/Users/vlad/Downloads/mai_python_2019-master/04 Lambdas/pinksweater.txt", encoding="utf-8-sig") as f:
+with open("pinksweater.txt", encoding="utf-8-sig") as f:
     text = f.read()
 # сразу удаляем переводы строк - они нам не понадобятся
 text = text.replace("\n", " ").lower()
